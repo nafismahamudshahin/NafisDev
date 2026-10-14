@@ -1,10 +1,11 @@
+import HeroBanner from '@/components/heroSectoin/HeroBanner';
 import React from 'react';
 
 const HomePage = () => {
   return (
-    <div>
-
-    </div>
+    <>
+      <HeroBanner></HeroBanner>
+    </>
   );
 };
 
