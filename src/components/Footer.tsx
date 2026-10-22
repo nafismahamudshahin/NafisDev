@@ -4,6 +4,7 @@ import Link from "next/link";
 const footerLinks = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
+    { label: "Projects", href: "#projects" },
 ];
 
 async function getCurrentYear() {
@@ -15,7 +16,7 @@ export default async function Footer() {
     const year = await getCurrentYear();
 
     return (
-        <footer className="mt-auto border-t border-white/[0.08] bg-[#050505]">
+        <footer className="mt-auto border-t border-outline-variant bg-transparent">
             <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-16">
                 <div className="grid gap-10 py-12 sm:grid-cols-2 sm:items-center sm:py-14">
                     <div>
@@ -24,7 +25,7 @@ export default async function Footer() {
                             className="group inline-flex items-center gap-3"
                             aria-label="Nafis Mahamud Shahin, back to home"
                         >
-                            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#d49a68]/40 bg-[#111111] font-headline-sm text-base text-[#d49a68] transition-colors group-hover:border-[#d49a68]">
+                            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-outline-variant bg-[#111111] font-headline-sm text-base text-[#d49a68] transition-colors group-hover:border-primary/60">
                                 N
                             </span>
                             <span>
@@ -71,7 +72,7 @@ export default async function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-2 border-t border-white/[0.08] py-5 text-[11px] text-[#777780] sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-col gap-2 border-t border-outline-variant py-5 text-[11px] text-[#777780] sm:flex-row sm:items-center sm:justify-between">
                     <p>© {year} Nafis Mahamud Shahin. All rights reserved.</p>
                     <p>Designed and built with care.</p>
                 </div>
