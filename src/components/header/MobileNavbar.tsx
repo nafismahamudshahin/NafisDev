@@ -116,14 +116,14 @@ export default function MobileNavbar({ navItems }: MobileNavbarProps) {
                         );
                     })}
 
-                    <a
-                        href="mailto:nafismahamudshahin@gmail.com"
+                    <Link
+                        href="/#contact"
                         onClick={closeMenu}
                         className="mt-2 flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-on-primary transition-colors hover:bg-primary-container"
                     >
                         Let&apos;s Talk
                         <ArrowUpRight size={16} />
-                    </a>
+                    </Link>
                 </nav>
             </div>
         </>

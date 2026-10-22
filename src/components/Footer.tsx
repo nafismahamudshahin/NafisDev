@@ -5,6 +5,7 @@ const footerLinks = [
     { label: "Home", href: "/#home" },
     { label: "About", href: "/#about" },
     { label: "Projects", href: "/projects" },
+    { label: "Contact", href: "/#contact" },
 ];
 
 async function getCurrentYear() {
