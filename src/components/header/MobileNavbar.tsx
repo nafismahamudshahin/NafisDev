@@ -1,13 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-
-type NavItem = {
-    name: string;
-    href: string;
-};
+import { NavItem, useActiveSection } from "./useActiveSection";
 
 type MobileNavbarProps = {
     navItems: NavItem[];
@@ -15,50 +10,7 @@ type MobileNavbarProps = {
 
 export default function MobileNavbar({ navItems }: MobileNavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState("home");
-    const pathname = usePathname();
-
-    useEffect(() => {
-        if (pathname !== "/") return;
-
-        const sections = navItems
-            .filter(({ href }) => href.startsWith("/#"))
-            .map(({ href }) => document.getElementById(href.split("#")[1]))
-            .filter((section): section is HTMLElement => section !== null);
-
-        if (!sections.length) return;
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const visibleSections = entries
-                    .filter((entry) => entry.isIntersecting)
-                    .sort(
-                        (a, b) =>
-                            a.boundingClientRect.top -
-                            b.boundingClientRect.top
-                    );
-
-                const currentSection = visibleSections[0];
-
-                if (currentSection) {
-                    setActiveSection((previous) =>
-                        previous === currentSection.target.id
-                            ? previous
-                            : currentSection.target.id
-                    );
-                }
-            },
-            {
-                root: null,
-                rootMargin: "-35% 0px -60% 0px",
-                threshold: 0,
-            }
-        );
-
-        sections.forEach((section) => observer.observe(section));
-
-        return () => observer.disconnect();
-    }, [navItems, pathname]);
+    const { isActive } = useActiveSection(navItems);
 
     const closeMenu = () => setIsMenuOpen(false);
 
@@ -93,10 +45,7 @@ export default function MobileNavbar({ navItems }: MobileNavbarProps) {
                     className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-4 py-4 sm:px-8"
                 >
                     {navItems.map((item) => {
-                        const sectionId = item.href.split("#")[1];
-                        const isActive = item.href === "/projects"
-                            ? pathname === "/projects"
-                            : pathname === "/" && activeSection === sectionId;
+                        const active = isActive(item.href);
 
                         return (
                             <Link
@@ -104,8 +53,8 @@ export default function MobileNavbar({ navItems }: MobileNavbarProps) {
                                 href={item.href}
                                 onClick={closeMenu}
                                 tabIndex={isMenuOpen ? 0 : -1}
-                                aria-current={isActive ? "location" : undefined}
-                                className={`flex min-h-12 items-center justify-between rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-[0.1em] transition-colors ${isActive
+                                aria-current={active ? "location" : undefined}
+                                className={`flex min-h-12 items-center justify-between rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-[0.1em] transition-colors ${active
                                     ? "bg-primary/10 text-primary"
                                     : "text-on-surface-variant hover:bg-surface-container hover:text-primary"
                                     }`}
