@@ -60,10 +60,10 @@ export default function HeroBanner() {
                 {/* Buttons */}
                 <div className="flex flex-wrap items-center gap-4 pt-1">
                     <Link
-                        href="#projects"
+                        href="mailto:hello@nafis.dev"
                         className="group inline-flex items-center gap-2 rounded-full bg-[#d49a68] px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-[#050505] shadow-[0_4px_24px_rgba(212,154,104,0.18)] transition duration-300 hover:scale-[1.02] hover:bg-[#e5b68e] hover:shadow-[0_4px_32px_rgba(212,154,104,0.28)] active:scale-[0.98]"
                     >
-                        View My Projects
+                        Get in Touch
                         <ArrowDown
                             size={18}
                             aria-hidden="true"

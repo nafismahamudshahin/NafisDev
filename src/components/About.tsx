@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, DraftingCompass } from "lucide-react";
+import { DraftingCompass } from "lucide-react";
 import MyImage from "@/assets/nafisdev.jpeg";
 
 const skills = [
@@ -136,24 +135,6 @@ export default function About() {
                         </div>
                     </div>
 
-                    {/* Projects link */}
-                    <div className="pt-1">
-                        <Link
-                            href="#projects"
-                            className="group inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-primary"
-                        >
-                            <span className="relative pb-1">
-                                Explore My Projects
-                                <span className="absolute bottom-0 left-0 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full" />
-                            </span>
-
-                            <ArrowRight
-                                size={18}
-                                aria-hidden="true"
-                                className="transition-transform duration-300 group-hover:translate-x-2"
-                            />
-                        </Link>
-                    </div>
                 </div>
             </div>
         </section>

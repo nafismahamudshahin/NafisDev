@@ -5,9 +5,6 @@ import MobileNavbar from "./MobileNavbar";
 const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -54,7 +51,7 @@ const Navbar = () => {
                 {/* Desktop actions */}
                 <div className="hidden items-center gap-3 lg:flex">
                     <Link
-                        href="#contact"
+                        href="mailto:hello@nafis.dev"
                         className="inline-flex items-center gap-2 rounded-full border border-[#d49a68]/50 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#d49a68] transition-all duration-300 hover:border-[#d49a68] hover:bg-[#d49a68] hover:text-[#050505]"
                     >
                         Let&apos;s Talk
