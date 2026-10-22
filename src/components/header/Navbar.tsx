@@ -6,6 +6,7 @@ const navItems = [
     { name: "Home", href: "/#home" },
     { name: "About", href: "/#about" },
     { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -60,7 +61,7 @@ const Navbar = () => {
                     </Link>
 
                     <Link
-                        href="#about"
+                        href="/#about"
                         aria-label="About me"
                         className="flex h-10 w-10 items-center justify-center rounded-full border border-outline-variant text-[#a1a1aa] transition-all duration-300 hover:border-primary hover:bg-[#d49a68]/10 hover:text-[#d49a68]"
                     >
