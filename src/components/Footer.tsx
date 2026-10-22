@@ -2,9 +2,9 @@ import { ArrowUp, Download } from "lucide-react";
 import Link from "next/link";
 
 const footerLinks = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
+    { label: "Home", href: "/#home" },
+    { label: "About", href: "/#about" },
+    { label: "Projects", href: "/projects" },
 ];
 
 async function getCurrentYear() {
@@ -21,7 +21,7 @@ export default async function Footer() {
                 <div className="grid gap-10 py-12 sm:grid-cols-2 sm:items-center sm:py-14">
                     <div>
                         <Link
-                            href="#home"
+                            href="/#home"
                             className="group inline-flex items-center gap-3"
                             aria-label="Nafis Mahamud Shahin, back to home"
                         >
@@ -63,7 +63,7 @@ export default async function Footer() {
                             </a>
                         </nav>
                         <Link
-                            href="#home"
+                            href="/#home"
                             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#d49a68] transition-colors hover:text-[#e5b68e]"
                         >
                             Back to top

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 type NavItem = {
@@ -15,10 +16,14 @@ type MobileNavbarProps = {
 export default function MobileNavbar({ navItems }: MobileNavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
+    const pathname = usePathname();
 
     useEffect(() => {
+        if (pathname !== "/") return;
+
         const sections = navItems
-            .map(({ href }) => document.getElementById(href.slice(1)))
+            .filter(({ href }) => href.startsWith("/#"))
+            .map(({ href }) => document.getElementById(href.split("#")[1]))
             .filter((section): section is HTMLElement => section !== null);
 
         if (!sections.length) return;
@@ -53,7 +58,7 @@ export default function MobileNavbar({ navItems }: MobileNavbarProps) {
         sections.forEach((section) => observer.observe(section));
 
         return () => observer.disconnect();
-    }, [navItems]);
+    }, [navItems, pathname]);
 
     const closeMenu = () => setIsMenuOpen(false);
 
@@ -88,8 +93,10 @@ export default function MobileNavbar({ navItems }: MobileNavbarProps) {
                     className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-4 py-4 sm:px-8"
                 >
                     {navItems.map((item) => {
-                        const sectionId = item.href.slice(1);
-                        const isActive = activeSection === sectionId;
+                        const sectionId = item.href.split("#")[1];
+                        const isActive = item.href === "/projects"
+                            ? pathname === "/projects"
+                            : pathname === "/" && activeSection === sectionId;
 
                         return (
                             <Link

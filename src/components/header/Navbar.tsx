@@ -3,9 +3,9 @@ import { ArrowUpRight, UserRound } from "lucide-react";
 import MobileNavbar from "./MobileNavbar";
 
 const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
+    { name: "Home", href: "/#home" },
+    { name: "About", href: "/#about" },
+    { name: "Projects", href: "/projects" },
 ];
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
             <div className="mx-auto flex h-16 w-full max-w-7xl min-w-0 items-center justify-between gap-2 px-3 sm:h-20 sm:gap-4 sm:px-8 lg:px-16">
                 {/* Logo */}
                 <Link
-                    href="#home"
+                    href="/#home"
                     aria-label="Nafis Mahamud Shahin home"
                     className="group flex min-w-0 shrink items-center gap-2 sm:gap-3"
                 >
