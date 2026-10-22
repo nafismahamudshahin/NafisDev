@@ -19,7 +19,7 @@ export default function About() {
     return (
         <section
             id="about"
-            className="relative w-full overflow-hidden bg-background py-20 text-on-surface sm:py-16 md:py-20"
+            className="relative w-full overflow-hidden bg-transparent py-20 text-on-surface sm:py-16 md:py-20"
         >
             <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-16">
                 {/* Left side */}
@@ -46,11 +46,11 @@ export default function About() {
                             <circle cx="106" cy="106" r="3" fill="#9b6039" />
                         </svg>
 
-                        <div className="absolute h-[78%] w-[78%] rotate-45 rounded-[28%] border border-dashed border-secondary/30" />
+                        <div className="absolute h-[78%] w-[78%] rotate-45 rounded-[28%] border border-dashed border-outline-variant" />
                     </div>
 
                     {/* Image card */}
-                    <div className="group relative z-10 aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-2xl border border-outline/30 bg-surface p-2 shadow-2xl">
+                    <div className="group relative z-10 aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-2xl border border-outline-variant bg-surface p-2 shadow-2xl">
                         <div className="relative h-full w-full overflow-hidden rounded-xl bg-surface-container">
                             <div className="absolute inset-0 flex items-center justify-center text-6xl font-semibold text-primary/40">
                                 N
@@ -68,7 +68,7 @@ export default function About() {
                             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface-container-lowest/70 via-transparent to-transparent" />
                         </div>
 
-                        <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center justify-between rounded-xl border border-secondary/30 bg-surface/95 p-4 shadow-lg backdrop-blur-md">
+                        <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center justify-between rounded-xl border border-outline-variant bg-surface/95 p-4 shadow-lg backdrop-blur-md">
                             <div>
                                 <p className="font-headline-sm text-2xl leading-tight text-primary">
                                     Developer
@@ -127,7 +127,7 @@ export default function About() {
                             {skills.map((skill) => (
                                 <span
                                     key={skill}
-                                    className="cursor-default rounded-full border border-outline/35 bg-surface-container-low px-3.5 py-2 text-xs font-medium text-on-surface transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-on-primary"
+                                    className="cursor-default rounded-full border border-outline-variant bg-surface-container-low px-3.5 py-2 text-xs font-medium text-on-surface transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-on-primary"
                                 >
                                     {skill}
                                 </span>

@@ -16,11 +16,83 @@
     --color-primary-container: #292019;
     --color-secondary: #d49a68;
 
-    --color-outline: #525252;
-    --color-outline-variant: #292929;
+    --color-outline: #252525;
+    --color-outline-variant: #171717;
 }
 
 body {
     background: var(--color-background);
     color: var(--color-on-surface);
+}
+
+.site-ambient {
+    position: fixed;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    contain: strict;
+}
+
+.site-ambient__glow {
+    position: absolute;
+    width: min(72vw, 58rem);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgb(212 154 104 / 0.075) 0%,
+        rgb(212 154 104 / 0.035) 34%,
+        transparent 70%
+    );
+    animation: ambient-drift 46s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+.site-ambient__glow--one {
+    top: -34vw;
+    left: -27vw;
+}
+
+.site-ambient__glow--two {
+    top: 24vh;
+    right: -38vw;
+    width: min(68vw, 52rem);
+    animation-duration: 58s;
+    animation-delay: -29s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes ambient-drift {
+    from {
+        transform: translate3d(-2vw, -2vh, 0) scale(0.94);
+    }
+
+    to {
+        transform: translate3d(5vw, 5vh, 0) scale(1.08);
+    }
+}
+
+@media (max-width: 640px) {
+    .site-ambient__glow {
+        width: 105vw;
+        opacity: 0.7;
+    }
+
+    .site-ambient__glow--one {
+        top: -30vw;
+        left: -55vw;
+    }
+
+    .site-ambient__glow--two {
+        top: 42vh;
+        right: -65vw;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-ambient__glow {
+        animation: none;
+        will-change: auto;
+    }
 }

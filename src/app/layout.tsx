@@ -26,10 +26,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="relative isolate flex min-h-full flex-col bg-background">
+        <div aria-hidden="true" className="site-ambient">
+          <span className="site-ambient__glow site-ambient__glow--one" />
+          <span className="site-ambient__glow site-ambient__glow--two" />
+        </div>
         <Navbar></Navbar>
-        {children}
-        <Footer />
+        <div className="relative z-10 flex flex-1 flex-col">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
