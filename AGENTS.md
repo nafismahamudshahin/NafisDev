@@ -1,6 +1,7 @@
 # Repository guide
 
-- This is a single Next.js App Router app (Next 16, React 19) under `src/app`; `src/app/page.tsx` is the home page and shared UI is in `src/components/`.
-- Use the npm scripts in `package.json`: `npm run dev` for local development, `npm run lint` for ESLint, `npm run build` for a production build, and `npm run start` to serve a built app. There is no test or typecheck script defined.
-- TypeScript is strict; the `@/*` import alias resolves to `src/*`.
-- `package-lock.json` is the checked-in lockfile; use npm for dependency installation and script execution.
+- This is a single Next.js 16 App Router portfolio (React 19). `src/app/page.tsx` composes the page; shared sections live in `src/components/`, project content in `src/data/projects.ts`, and project previews in `public/projects/`.
+- Use npm and the checked-in `package-lock.json`: `npm run dev`, `npm run lint`, `npm run build`, and `npm run start`. There is no test or standalone typecheck script; `next build` performs TypeScript checking.
+- `next.config.ts` enables Cache Components and partial prefetching. Dynamic values such as `new Date()` need to be cached (for example, with `"use cache"`) or prerendering can fail.
+- Tailwind CSS v4 is loaded through the Turbopack CSS loader in `next.config.ts`; the active global theme is `src/app/globals.css`. `src/app/test.css` is not imported.
+- TypeScript is strict, and the `@/*` alias resolves to `src/*`.
