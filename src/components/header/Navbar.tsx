@@ -5,11 +5,12 @@ import MobileNavbar from "./MobileNavbar";
 const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
 ];
 
 const Navbar = () => {
     return (
-        <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.08] bg-[#050505]/90 shadow-[0_4px_24px_rgba(0,0,0,0.4)] backdrop-blur-xl">
+        <header className="fixed inset-x-0 top-0 z-50 border-b border-outline-variant bg-[#050505]/90 shadow-[0_4px_24px_rgba(0,0,0,0.4)] backdrop-blur-xl">
             <div className="mx-auto flex h-16 w-full max-w-7xl min-w-0 items-center justify-between gap-2 px-3 sm:h-20 sm:gap-4 sm:px-8 lg:px-16">
                 {/* Logo */}
                 <Link
@@ -17,7 +18,7 @@ const Navbar = () => {
                     aria-label="Nafis Mahamud Shahin home"
                     className="group flex min-w-0 shrink items-center gap-2 sm:gap-3"
                 >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#d49a68]/40 bg-[#111111] font-headline-sm text-sm text-[#d49a68] transition-colors duration-300 group-hover:border-[#d49a68] group-hover:bg-[#191919] sm:h-10 sm:w-10 sm:text-base">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-outline-variant bg-[#111111] font-headline-sm text-sm text-[#d49a68] transition-colors duration-300 group-hover:border-primary/60 group-hover:bg-[#191919] sm:h-10 sm:w-10 sm:text-base">
                         N
                     </span>
 
@@ -51,8 +52,8 @@ const Navbar = () => {
                 {/* Desktop actions */}
                 <div className="hidden items-center gap-3 lg:flex">
                     <Link
-                        href="mailto:hello@nafis.dev"
-                        className="inline-flex items-center gap-2 rounded-full border border-[#d49a68]/50 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#d49a68] transition-all duration-300 hover:border-[#d49a68] hover:bg-[#d49a68] hover:text-[#050505]"
+                        href="mailto:nafismahamudshahin@gmail.com"
+                        className="inline-flex items-center gap-2 rounded-full border border-outline-variant px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#d49a68] transition-all duration-300 hover:border-primary hover:bg-[#d49a68] hover:text-[#050505]"
                     >
                         Let&apos;s Talk
                         <ArrowUpRight size={15} aria-hidden="true" />
@@ -61,7 +62,7 @@ const Navbar = () => {
                     <Link
                         href="#about"
                         aria-label="About me"
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.12] text-[#a1a1aa] transition-all duration-300 hover:border-[#d49a68] hover:bg-[#d49a68]/10 hover:text-[#d49a68]"
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-outline-variant text-[#a1a1aa] transition-all duration-300 hover:border-primary hover:bg-[#d49a68]/10 hover:text-[#d49a68]"
                     >
                         <UserRound size={16} strokeWidth={1.5} aria-hidden="true" />
                     </Link>

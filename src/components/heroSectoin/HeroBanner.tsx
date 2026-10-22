@@ -24,7 +24,7 @@ export default function HeroBanner() {
             {/* Left column */}
             <div className="relative z-10 flex flex-col gap-7 lg:col-span-7">
                 {/* Availability status */}
-                <div className="inline-flex self-start items-center gap-2 rounded-full border border-[#d49a68]/25 bg-[#111111]/90 px-4 py-2 backdrop-blur-md">
+                <div className="inline-flex self-start items-center gap-2 rounded-full border border-outline-variant bg-[#111111]/90 px-4 py-2 backdrop-blur-md">
                     <span className="h-2 w-2 animate-pulse rounded-full bg-[#d49a68]" />
                     <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a1a1aa]">
                         Open to Opportunities
@@ -60,10 +60,10 @@ export default function HeroBanner() {
                 {/* Buttons */}
                 <div className="flex flex-wrap items-center gap-4 pt-1">
                     <Link
-                        href="mailto:hello@nafis.dev"
+                        href="#projects"
                         className="group inline-flex items-center gap-2 rounded-full bg-[#d49a68] px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-[#050505] shadow-[0_4px_24px_rgba(212,154,104,0.18)] transition duration-300 hover:scale-[1.02] hover:bg-[#e5b68e] hover:shadow-[0_4px_32px_rgba(212,154,104,0.28)] active:scale-[0.98]"
                     >
-                        Get in Touch
+                        View My Projects
                         <ArrowDown
                             size={18}
                             aria-hidden="true"
@@ -74,7 +74,7 @@ export default function HeroBanner() {
                     <a
                         href="/resume.pdf"
                         download
-                        className="group inline-flex items-center gap-2.5 rounded-full border border-white/[0.14] bg-[#111111] px-6 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition duration-300 hover:border-[#d49a68]/50 hover:bg-[#191919]"
+                        className="group inline-flex items-center gap-2.5 rounded-full border border-outline-variant bg-[#111111] px-6 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition duration-300 hover:border-primary/60 hover:bg-[#191919]"
                     >
                         <Download
                             size={18}
@@ -86,13 +86,13 @@ export default function HeroBanner() {
                 </div>
 
                 {/* Stats */}
-                <div className="mt-2 grid max-w-xl grid-cols-3 gap-3 rounded-xl border border-white/[0.09] bg-[#0a0a0a]/90 p-4 backdrop-blur-md sm:gap-4 sm:p-6">
+                <div className="mt-2 grid max-w-xl grid-cols-3 gap-3 rounded-xl border border-outline-variant bg-[#0a0a0a]/90 p-4 backdrop-blur-md sm:gap-4 sm:p-6">
                     {stats.map((stat, index) => (
                         <div
                             key={stat.label}
                             className={
                                 index > 0
-                                    ? "border-l border-white/[0.10] pl-3 sm:pl-4"
+                                    ? "border-l border-outline-variant pl-3 sm:pl-4"
                                     : ""
                             }
                         >
@@ -133,11 +133,11 @@ export default function HeroBanner() {
                         <circle cx="10" cy="250" r="4" fill="#d49a68" />
                     </svg>
 
-                    <div className="absolute h-[78%] w-[78%] rotate-45 rounded-[28%] border border-dashed border-[#d49a68]/30" />
+                    <div className="absolute h-[78%] w-[78%] rotate-45 rounded-[28%] border border-dashed border-outline-variant" />
                 </div>
 
                 {/* Portrait frame */}
-                <div className="group relative z-10 aspect-[4/5] w-full rounded-2xl border border-white/[0.12] bg-gradient-to-b from-[#191919] via-[#0d0d0d] to-[#050505] p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.65)]">
+                <div className="group relative z-10 aspect-[4/5] w-full rounded-2xl border border-outline-variant bg-gradient-to-b from-[#191919] via-[#0d0d0d] to-[#050505] p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.65)]">
                     <div className="relative h-full w-full overflow-hidden rounded-xl bg-[#111111]">
                         <div className="absolute inset-0 flex items-center justify-center">
                             <span className="text-6xl text-[#d49a68]/50">NS</span>
@@ -155,7 +155,7 @@ export default function HeroBanner() {
                     </div>
 
                     {/* Top badge */}
-                    <div className="absolute -right-3 -top-3 z-20 flex items-center gap-2 rounded-full border border-[#d49a68]/25 bg-[#111111]/95 px-3.5 py-2 shadow-lg backdrop-blur-md">
+                    <div className="absolute -right-3 -top-3 z-20 flex items-center gap-2 rounded-full border border-outline-variant bg-[#111111]/95 px-3.5 py-2 shadow-lg backdrop-blur-md">
                         <span className="h-1.5 w-1.5 rounded-full bg-[#d49a68]" />
                         <span className="text-[10px] font-semibold uppercase tracking-wider text-[#f5f5f5]">
                             Learn. Build. Improve.
@@ -163,7 +163,7 @@ export default function HeroBanner() {
                     </div>
 
                     {/* Bottom badge */}
-                    <div className="absolute -bottom-4 -left-4 z-20 flex items-center gap-3 rounded-xl border border-white/[0.12] bg-[#111111]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
+                    <div className="absolute -bottom-4 -left-4 z-20 flex items-center gap-3 rounded-xl border border-outline-variant bg-[#111111]/95 px-4 py-2.5 shadow-xl backdrop-blur-md">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#d49a68] text-[#050505]">
                             <Code2 size={18} aria-hidden="true" />
                         </div>

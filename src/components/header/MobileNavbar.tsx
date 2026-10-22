@@ -66,7 +66,7 @@ export default function MobileNavbar({ navItems }: MobileNavbarProps) {
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMenuOpen}
                 aria-controls="mobile-navigation"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-outline-variant/50 text-on-surface transition-colors hover:border-primary hover:text-primary sm:h-10 sm:w-10 lg:hidden"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-outline-variant text-on-surface transition-colors hover:border-primary hover:text-primary sm:h-10 sm:w-10 lg:hidden"
             >
                 {isMenuOpen ? (
                     <X size={21} strokeWidth={1.5} />
@@ -78,7 +78,7 @@ export default function MobileNavbar({ navItems }: MobileNavbarProps) {
             {/* Mobile dropdown */}
             <div
                 id="mobile-navigation"
-                className={`absolute inset-x-0 top-full overflow-x-hidden border-b border-surface-container-high/40 bg-surface/95 shadow-xl backdrop-blur-xl transition-[max-height,opacity] duration-300 lg:hidden ${isMenuOpen
+                className={`absolute inset-x-0 top-full overflow-x-hidden border-b border-outline-variant bg-surface/95 shadow-xl backdrop-blur-xl transition-[max-height,opacity] duration-300 lg:hidden ${isMenuOpen
                     ? "max-h-[calc(100dvh-4rem)] overflow-y-auto opacity-100"
                     : "pointer-events-none max-h-0 opacity-0"
                     }`}
@@ -110,7 +110,7 @@ export default function MobileNavbar({ navItems }: MobileNavbarProps) {
                     })}
 
                     <a
-                        href="mailto:hello@nafis.dev"
+                        href="mailto:nafismahamudshahin@gmail.com"
                         onClick={closeMenu}
                         className="mt-2 flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-on-primary transition-colors hover:bg-primary-container"
                     >
