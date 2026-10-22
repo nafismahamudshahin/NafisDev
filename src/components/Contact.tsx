@@ -27,8 +27,23 @@ export default function Contact() {
         <section
             id="contact"
             aria-labelledby="contact-heading"
-            className="scroll-mt-20 border-t border-outline-variant bg-transparent py-16 text-on-surface sm:py-20"
+            className="scroll-mt-20 bg-transparent py-16 text-on-surface sm:py-20"
         >
+            <div className="mx-auto mb-8 w-full max-w-2xl px-4 text-center sm:mb-10">
+                <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.25em] text-primary sm:text-sm">
+                    Get In Touch
+                </span>
+
+                <h2 className="mb-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                    Let&apos;s Connect
+                    <span className="text-primary">.</span>
+                </h2>
+
+                <p className="mx-auto max-w-xl text-sm leading-7 text-gray-400 sm:text-base md:text-lg">
+                    Have an idea or a project in mind? I&apos;m always open to new
+                    opportunities, collaborations, and interesting conversations.
+                </p>
+            </div>
             <div className="mx-auto grid w-full max-w-7xl gap-5 px-5 sm:px-8 lg:grid-cols-12 lg:gap-6 lg:px-16">
                 <div className="rounded-2xl border border-outline-variant bg-surface-container p-5 sm:p-7 lg:col-span-7 lg:p-8">
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">
