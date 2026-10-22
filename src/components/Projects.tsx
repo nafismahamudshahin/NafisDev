@@ -13,7 +13,7 @@ export default function Projects() {
         <section
             id="projects"
             aria-labelledby="projects-heading"
-            className="relative scroll-mt-20 overflow-hidden bg-transparent py-20 text-on-surface sm:py-24 lg:py-28"
+            className="relative scroll-mt-20 overflow-hidden bg-transparent pb-5 text-on-surface sm:pb-10 lg:pb-20"
         >
             {/* Background glow */}
             <div
@@ -23,7 +23,7 @@ export default function Projects() {
 
             <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-16">
                 {/* Section Heading */}
-                <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
+                <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
                     <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.07] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-xs">
                         <Sparkles size={14} aria-hidden="true" />
                         Selected Work
@@ -53,8 +53,8 @@ export default function Projects() {
                             <article
                                 key={project.name}
                                 className={`group relative flex min-w-0 flex-col overflow-hidden rounded-xl border p-3.5 transition-all duration-500 hover:-translate-y-1.5 sm:p-4 motion-reduce:transform-none motion-reduce:transition-none ${isFeatured
-                                        ? "border-primary/40 bg-surface-container-high shadow-[0_0_35px_rgba(217,145,91,0.07)] hover:shadow-[0_12px_45px_rgba(217,145,91,0.13)]"
-                                        : "border-outline-variant bg-surface-container shadow-[0_14px_35px_rgba(0,0,0,0.22)] hover:border-primary/50 hover:bg-surface-container-high hover:shadow-[0_20px_48px_rgba(0,0,0,0.34)]"
+                                    ? "border-primary/40 bg-surface-container-high shadow-[0_0_35px_rgba(217,145,91,0.07)] hover:shadow-[0_12px_45px_rgba(217,145,91,0.13)]"
+                                    : "border-outline-variant bg-surface-container shadow-[0_14px_35px_rgba(0,0,0,0.22)] hover:border-primary/50 hover:bg-surface-container-high hover:shadow-[0_20px_48px_rgba(0,0,0,0.34)]"
                                     }`}
                             >
                                 {/* Featured Badge */}

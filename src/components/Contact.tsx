@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Mail, UserRound } from "lucide-react";
+import { ArrowUpRight, Code2, Mail, Sparkles, UserRound } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 const contactLinks = [
@@ -30,7 +30,8 @@ export default function Contact() {
             className="scroll-mt-20 bg-transparent py-16 text-on-surface sm:py-20"
         >
             <div className="mx-auto mb-8 w-full max-w-2xl px-4 text-center sm:mb-10">
-                <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.25em] text-primary sm:text-sm">
+                <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.07] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-xs">
+                    <Sparkles size={14} aria-hidden="true" />
                     Get In Touch
                 </span>
 

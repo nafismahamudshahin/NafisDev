@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { DraftingCompass } from "lucide-react";
+import { DraftingCompass, Sparkles } from "lucide-react";
 import MyImage from "@/assets/nafisdev.jpeg";
 
 const skills = [
@@ -7,19 +7,23 @@ const skills = [
     "Next.js",
     "TypeScript",
     "JavaScript",
+    "Better auth",
     "Node.js",
     "Express.js",
     "Python",
     "Django",
     "PostgreSQL",
+    "MongoDB",
     "Tailwind CSS",
+    "ShadCN",
+    "Hero Ui"
 ];
 
 export default function About() {
     return (
         <section
             id="about"
-            className="relative w-full overflow-hidden bg-transparent py-20 text-on-surface sm:py-16 md:py-20"
+            className="relative w-full overflow-hidden bg-transparent pb-5 text-on-surface sm:pb-10 md:pb-20"
         >
             <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-16">
                 {/* Left side */}
@@ -88,9 +92,11 @@ export default function About() {
                 {/* About content */}
                 <div className="flex min-w-0 flex-col gap-7 lg:col-span-7">
                     <div className="flex flex-col gap-2">
-                        <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                        <span className="mb-4 inline-flex w-37 text-center items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.07] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-xs">
+                            <Sparkles size={14} aria-hidden="true" />
                             About Me
                         </span>
+
 
                         <h2 className="font-headline-lg text-3xl leading-tight text-on-surface sm:text-5xl">
                             Building Modern, Responsive &amp; User-Friendly Web Applications

@@ -13,7 +13,7 @@ export default function HeroBanner() {
     return (
         <section
             id="home"
-            className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-14 overflow-hidden px-5 pb-20 pt-24 text-white sm:px-8 md:gap-16 md:pb-28 md:pt-28 lg:grid-cols-12 lg:gap-12 lg:px-16"
+            className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-14 overflow-hidden px-5 pt-24 text-white sm:px-8 md:gap-16 pb-5 sm:pb-10 md:pb-20 md:pt-28 lg:grid-cols-12 lg:gap-12 lg:px-16"
         >
             {/* Subtle dark-theme glow */}
             <div
@@ -116,12 +116,7 @@ export default function HeroBanner() {
                 >
                     <div className="absolute inset-0 rounded-full bg-[#d49a68]/[0.08] blur-[100px]" />
 
-                    <svg
-                        viewBox="0 0 500 500"
-                        fill="none"
-                        aria-hidden="true"
-                        className="absolute inset-0 h-full w-full animate-[spin_120s_linear_infinite] opacity-40 motion-reduce:animate-none"
-                    >
+                    <svg viewBox="0 0 500 500" fill="none" aria-hidden="true" className="absolute inset-0 h-full w-full animate-[spin_120s_linear_infinite] opacity-40 motion-reduce:animate-none">
                         <circle cx="250" cy="250" r="238" stroke="#d49a68" strokeDasharray="4 8" />
                         <circle cx="250" cy="250" r="205" stroke="#d49a68" strokeDasharray="2 14" />
                         <circle cx="250" cy="250" r="165" stroke="#d49a68" strokeDasharray="12 12" />
